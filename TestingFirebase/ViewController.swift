@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     var uid = ""
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
             print("email is",user.email!,user.uid)
             
             self.uid = user.uid
+            self.defaults.set(self.uid, forKey: "uid")
             
             self.performSegue(withIdentifier: "addData", sender: nil)
             
