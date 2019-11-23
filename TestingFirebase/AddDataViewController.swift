@@ -74,6 +74,12 @@ class AddDataViewController: UIViewController {
                 print("Error writing document: \(err.localizedDescription)")
             } else {
                 print("Document successfully written!")
+                let alert:UIAlertController = UIAlertController(title: "Message", message: "Data added Successfully", preferredStyle: .alert)
+                let action:UIAlertAction = UIAlertAction(title: "Ok", style: .default , handler: nil)
+                
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
             }
         }
         
@@ -94,6 +100,13 @@ class AddDataViewController: UIViewController {
                  print("Error writing document: \(err.localizedDescription)")
             }else{
                 print("Document successfully updated!")
+                let alert:UIAlertController = UIAlertController(title: "Message", message: "Data updated Successfully", preferredStyle: .alert)
+                let action:UIAlertAction = UIAlertAction(title: "Ok", style: .default , handler: nil)
+                
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
+                
             }
         }
         
@@ -108,6 +121,12 @@ class AddDataViewController: UIViewController {
                 print(err.localizedDescription)
             }else{
                 print("sucessfully deleted")
+                let alert:UIAlertController = UIAlertController(title: "Message", message: "Data deleted Successfully", preferredStyle: .alert)
+                let action:UIAlertAction = UIAlertAction(title: "Ok", style: .default , handler: nil)
+                
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
             }
         })
     }
